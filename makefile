@@ -1,0 +1,2 @@
+today:
+	node add.mjs
