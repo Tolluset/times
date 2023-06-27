@@ -29,7 +29,7 @@ function convertFormat(date) {
 
 function isFileExist(fileName) {
   if (fs.existsSync(fileName)) {
-    console.log(`파일이 이미 존재합니다. ${fileName}`);
+    console.info(`기존 파일이 존재합니다. ${fileName}`);
 
     return true;
   } else return false;
@@ -38,7 +38,7 @@ function isFileExist(fileName) {
 function addFile(fileName, contents) {
   fs.writeFile(fileName, contents, (err) => {
     if (err) throw err;
-    console.log(`${fileName} 파일이 생성되었습니다.`);
+    console.info(`${fileName} 파일이 생성되었습니다.`);
   });
 }
 
